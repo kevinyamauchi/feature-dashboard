@@ -1,0 +1,28 @@
+name: feature-dashboard
+display_name: FeatureDashboard
+contributions:
+  commands:
+    - id: feature-dashboard.make_sample_data
+      python_name: feature_dashboard._sample_data:make_sample_data
+      title: Load sample data from FeatureDashboard 
+    - id: feature-dashboard.make_qwidget
+      python_name: feature_dashboard._widget:ExampleQWidget
+      title: Make example QWidget
+    - id: feature-dashboard.make_magic_widget
+      python_name: feature_dashboard._widget:example_magic_widget
+      title: Make example magic widget
+    - id: feature-dashboard.make_func_widget
+      python_name: feature_dashboard._widget:example_function_widget
+      title: Make example function widget   
+  sample_data:
+    - command: feature-dashboard.make_sample_data
+      display_name: FeatureDashboard
+      key: unique_id.1 
+  widgets:
+    - command: feature-dashboard.make_qwidget
+      display_name: Example QWidget
+    - command: feature-dashboard.make_magic_widget
+      display_name: Example Magic Widget
+    - command: feature-dashboard.make_func_widget
+      autogenerate: true
+      display_name: Example Function Widget 
